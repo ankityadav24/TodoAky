@@ -1,21 +1,26 @@
-body {
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: #f4f4f4;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
   }
   
   .app {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 30px; 
     background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
   }
   
   h1 {
     text-align: center;
+    font-size: 1.8em; 
   }
   
   .task-form {
@@ -27,6 +32,7 @@ body {
     flex: 1;
     padding: 10px;
     font-size: 16px;
+    border-radius: 10px;
   }
   
   .add-task-btn {
@@ -36,6 +42,7 @@ body {
     color: white;
     border: none;
     cursor: pointer;
+    margin-left: 2px;
   }
   
   .add-task-btn:hover {
@@ -74,5 +81,13 @@ body {
   .task-counter {
     text-align: center;
     margin-top: 20px;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto 20px auto; 
+    width: 100px; 
+    height: auto; 
+    border-radius: 50%;
   }
   

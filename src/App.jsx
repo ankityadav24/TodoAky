@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import './styles.css';
+import logo from './assets/akylogo.jpeg';
 
 const App = () => {
   const [tasks, setTasks] = useState(() => {
@@ -38,6 +39,7 @@ const App = () => {
 
   return (
     <div className="app">
+          <img src={logo} alt="Logo" className="logo" />
       <h1>To-Do List</h1>
       <TaskForm addTask={addTask} />
       <TaskList
