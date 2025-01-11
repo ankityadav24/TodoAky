@@ -1,0 +1,23 @@
+{
+    "name": "To-Do AKY",
+    "short_name": "TodoAky",
+    "description": "A simple To-Do List application to manage our tasks.",
+    "icons": [
+      {
+        "src": "/icons/icon-192x192.jpeg",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icons/icon-512x512.jpeg",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "theme_color": "#28a745",
+    "display": "standalone",
+    "orientation": "portrait-primary"
+  }
+  
