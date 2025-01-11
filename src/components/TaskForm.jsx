@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const TaskForm = ({ addTask }) => {
-  const [task, setTask] = useState('');
+  const [task, setTask] = useState("");
+  const [error, setError] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (task.trim() === '') return alert('Task cannot be empty');
+    if (task.trim() === "") {
+      setError("please  task cannot be empty  ");
+      return;
+    }
+    setError("");
     addTask(task);
-    setTask('');
+    setTask("");
   };
 
   return (
-    <form onSubmit={handleSubmit} className="task-form">
+    <form onSubmit={handleSubmit} >
+      <div className="task-form">
+
       <input
         type="text"
         value={task}
@@ -19,7 +26,10 @@ const TaskForm = ({ addTask }) => {
         placeholder="Add a new task"
         className="task-input"
       />
+
       <button type="submit" className="add-task-btn">Add</button>
+      </div>
+      {error && <p className="error-message">{error}</p>}
     </form>
   );
 };

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import logo from './assets/akylogo.jpeg';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import './styles.css';
-import logo from './assets/akylogo.jpeg';
 
 const App = () => {
   const [tasks, setTasks] = useState(() => {
@@ -19,7 +19,7 @@ const App = () => {
     setTasks([...tasks, newTask]);
   };
 
-  const toggleComplete = (id) => {
+  const TaskComplete = (id) => {
     const updatedTasks = tasks.map((task) =>
       task.id === id ? { ...task, completed: !task.completed } : task
     );
@@ -44,7 +44,7 @@ const App = () => {
       <TaskForm addTask={addTask} />
       <TaskList
         tasks={tasks}
-        toggleComplete={toggleComplete}
+        TaskComplete={TaskComplete}
         deleteTask={deleteTask}
       />
       <div className="task-counter">

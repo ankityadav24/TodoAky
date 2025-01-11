@@ -1,13 +1,13 @@
 import TaskItem from './TaskItem';
 
-const TaskList = ({ tasks, toggleComplete, deleteTask }) => {
+const TaskList = ({ tasks, TaskComplete, deleteTask }) => {
   return (
     <ul className="task-list">
       {tasks.map((task) => (
         <TaskItem
           key={task.id}
           task={task}
-          toggleComplete={toggleComplete}
+          TaskComplete={TaskComplete}
           deleteTask={deleteTask}
         />
       ))}
