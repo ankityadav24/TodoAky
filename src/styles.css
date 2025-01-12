@@ -108,9 +108,7 @@ h1 {
     font-size: 1.4em;
   }
   .app {
-    padding: 15px;  
-    justify-content: center;
-    align-items: center;
+    padding: 10px;  
   }
 
   .logo {
