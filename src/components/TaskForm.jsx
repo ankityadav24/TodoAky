@@ -30,6 +30,7 @@ const TaskForm = ({ addTask }) => {
       <button type="submit" className="add-task-btn">Add</button>
       </div>
       {error && <p className="error-message">{error}</p>}
+      
     </form>
   );
 };

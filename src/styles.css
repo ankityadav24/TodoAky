@@ -54,11 +54,21 @@ h1 {
 .add-task-btn:hover {
   background: #218838;
 }
+.serial-number {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.task-date {
+  font-size: 0.8em;
+  color: #170505d3;
+  margin-left: 5px;
+}
+
 
 .task-list {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .task-item {

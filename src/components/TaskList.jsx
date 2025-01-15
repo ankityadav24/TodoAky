@@ -1,11 +1,11 @@
-import TaskItem from './TaskItem';
+import TaskItem from "./TaskItem";
 
 const TaskList = ({ tasks, TaskComplete, deleteTask }) => {
   return (
     <ul className="task-list">
-      {tasks.map((task) => (
+      {tasks.map((task, index) => (
         <TaskItem
-          key={task.id}
+          serialnumber={index + 1}
           task={task}
           TaskComplete={TaskComplete}
           deleteTask={deleteTask}

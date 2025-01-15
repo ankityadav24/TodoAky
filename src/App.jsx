@@ -14,6 +14,7 @@ const App = () => {
     const newTask = {
       id: Date.now(),
       text,
+      date:new Date().toLocaleDateString(),
       completed: false, 
     };
     setTasks([...tasks, newTask]);
@@ -27,9 +28,13 @@ const App = () => {
   };
 
   const deleteTask = (id) => {
+    const isconfirmed=window.confirm("are u sure delete this task");  
+    if(isconfirmed){
     const updatedTasks = tasks.filter((task) => task.id !== id);
     setTasks(updatedTasks);
+  }
   };
+
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
